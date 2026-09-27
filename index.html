@@ -1,0 +1,1577 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>لباسنا السعودي | أزياء المناطق الخمس</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&family=Reem+Kufi+Fun:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+}
+
+body{
+  font-family:"Cairo",sans-serif;
+  background:#f7f1e5;
+  color:#173b2b;
+  min-height:100vh;
+}
+
+button{
+  font-family:inherit;
+}
+
+.header{
+  background:linear-gradient(135deg,#0d3b2e,#176044);
+  color:white;
+  padding:22px 7%;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:20px;
+  box-shadow:0 5px 20px rgba(0,0,0,.12);
+  position:sticky;
+  top:0;
+  z-index:50;
+}
+
+.logo{
+  display:flex;
+  align-items:center;
+  gap:13px;
+}
+
+.logo-symbol{
+  width:50px;
+  height:50px;
+  border:2px solid #d6ad57;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:25px;
+  background:rgba(255,255,255,.08);
+}
+
+.logo h1{
+  font-family:"Reem Kufi Fun",sans-serif;
+  font-size:25px;
+}
+
+.logo p{
+  color:#e7c878;
+  font-size:12px;
+  margin-top:2px;
+}
+
+.header-actions{
+  display:flex;
+  gap:10px;
+}
+
+.header-btn{
+  border:1px solid rgba(255,255,255,.3);
+  background:rgba(255,255,255,.08);
+  color:white;
+  padding:9px 15px;
+  border-radius:12px;
+  cursor:pointer;
+  transition:.2s;
+}
+
+.header-btn:hover{
+  background:rgba(255,255,255,.16);
+}
+
+.hero{
+  padding:70px 7% 45px;
+  text-align:center;
+  background:
+    radial-gradient(circle at top right,rgba(214,173,87,.22),transparent 35%),
+    radial-gradient(circle at bottom left,rgba(23,96,68,.12),transparent 35%);
+}
+
+.hero-badge{
+  display:inline-block;
+  color:#9b7629;
+  background:#fffaf0;
+  border:1px solid #e3cb93;
+  border-radius:30px;
+  padding:7px 18px;
+  font-size:13px;
+  margin-bottom:18px;
+}
+
+.hero h2{
+  font-family:"Reem Kufi Fun",sans-serif;
+  font-size:clamp(32px,5vw,58px);
+  color:#103d2d;
+  margin-bottom:12px;
+}
+
+.hero h2 span{
+  color:#b28b35;
+}
+
+.hero p{
+  max-width:720px;
+  margin:auto;
+  color:#637268;
+  line-height:2;
+  font-size:15px;
+}
+
+.regions{
+  padding:30px 7% 70px;
+}
+
+.section-title{
+  text-align:center;
+  margin-bottom:30px;
+}
+
+.section-title h3{
+  font-family:"Reem Kufi Fun",sans-serif;
+  font-size:29px;
+  color:#173b2b;
+}
+
+.section-title p{
+  color:#78837d;
+  margin-top:5px;
+  font-size:13px;
+}
+
+.region-grid{
+  display:grid;
+  grid-template-columns:repeat(5,1fr);
+  gap:17px;
+}
+
+.region-card{
+  background:white;
+  border-radius:22px;
+  overflow:hidden;
+  border:1px solid #e7dece;
+  box-shadow:0 8px 25px rgba(29,57,43,.08);
+  cursor:pointer;
+  transition:.3s;
+  position:relative;
+}
+
+.region-card:hover{
+  transform:translateY(-7px);
+  box-shadow:0 16px 35px rgba(29,57,43,.14);
+}
+
+.region-image{
+  height:190px;
+  position:relative;
+  overflow:hidden;
+}
+
+.region-image img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  transition:.4s;
+}
+
+.region-card:hover .region-image img{
+  transform:scale(1.05);
+}
+
+.region-overlay{
+  position:absolute;
+  inset:0;
+  background:linear-gradient(to top,rgba(0,0,0,.58),transparent 60%);
+}
+
+.region-name{
+  position:absolute;
+  bottom:13px;
+  right:15px;
+  color:white;
+  font-family:"Reem Kufi Fun",sans-serif;
+  font-size:22px;
+}
+
+.region-content{
+  padding:15px 17px 18px;
+}
+
+.region-content p{
+  color:#69756d;
+  font-size:12px;
+  line-height:1.9;
+}
+
+.region-link{
+  margin-top:12px;
+  color:#9b7629;
+  font-size:12px;
+  font-weight:700;
+}
+
+.detail{
+  display:none;
+  padding:35px 7% 70px;
+}
+
+.detail.active{
+  display:block;
+}
+
+.back-btn{
+  border:none;
+  background:#173f30;
+  color:white;
+  padding:10px 17px;
+  border-radius:12px;
+  cursor:pointer;
+  margin-bottom:25px;
+}
+
+.detail-head{
+  background:white;
+  border:1px solid #e7dece;
+  border-radius:25px;
+  padding:30px;
+  margin-bottom:25px;
+  box-shadow:0 8px 25px rgba(29,57,43,.06);
+}
+
+.detail-head h2{
+  font-family:"Reem Kufi Fun",sans-serif;
+  font-size:35px;
+  color:#173b2b;
+}
+
+.detail-head p{
+  color:#69756d;
+  line-height:2;
+  margin-top:8px;
+}
+
+.items-grid{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:20px;
+}
+
+.item-card{
+  background:white;
+  border:1px solid #e7dece;
+  border-radius:22px;
+  overflow:hidden;
+  box-shadow:0 8px 25px rgba(29,57,43,.07);
+}
+
+.item-image{
+  width:100%;
+  height:300px;
+  object-fit:cover;
+  cursor:zoom-in;
+}
+
+.item-image.dual-images-detail{
+  width:50%;
+  display:inline-block;
+  vertical-align:top;
+  height:300px;
+  object-fit:cover;
+  cursor:zoom-in;
+}
+
+.item-body{
+  padding:22px;
+}
+
+.item-number{
+  color:#b18a37;
+  font-size:12px;
+  font-weight:700;
+  margin-bottom:6px;
+}
+
+.item-title{
+  font-family:"Reem Kufi Fun",sans-serif;
+  color:#173b2b;
+  font-size:23px;
+  margin-bottom:9px;
+}
+
+.item-desc{
+  color:#68746d;
+  font-size:13px;
+  line-height:2;
+}
+
+.choice-symbol{
+  height:180px;
+  display:flex;
+  overflow:hidden;
+}
+
+.choice-symbol img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  cursor:zoom-in;
+}
+
+.choice-symbol.dual-images img{
+  width:50%;
+}
+
+.choice-body{
+  padding:17px;
+}
+
+.choice-body h4{
+  font-family:"Reem Kufi Fun",sans-serif;
+  font-size:19px;
+  color:#173b2b;
+}
+
+.choice-body p{
+  color:#748078;
+  font-size:12px;
+  margin-top:5px;
+}
+
+.sources{
+  margin-top:35px;
+  background:#173b2b;
+  color:white;
+  border-radius:24px;
+  padding:28px;
+}
+
+.sources h3{
+  font-family:"Reem Kufi Fun",sans-serif;
+  color:#e3c26c;
+  margin-bottom:13px;
+}
+
+.sources p{
+  font-size:12px;
+  line-height:2;
+  color:#dbe4df;
+}
+
+.sources a{
+  color:#e8cc82;
+  text-decoration:none;
+}
+
+.voice-btn{
+  margin-top:16px;
+  border:none;
+  background:#c49a42;
+  color:white;
+  padding:10px 16px;
+  border-radius:12px;
+  cursor:pointer;
+  font-family:inherit;
+}
+
+.footer{
+  text-align:center;
+  padding:30px 20px;
+  background:#0d3327;
+  color:#d8e1dc;
+  font-size:12px;
+  line-height:2;
+}
+
+.footer-title{
+  color:#e3c26c;
+  font-family:"Reem Kufi Fun",sans-serif;
+  font-size:16px;
+  margin-bottom:6px;
+}
+
+.footer-names{
+  color:#f0f3ef;
+  margin-top:4px;
+}
+
+.footer-teacher{
+  color:#e3c26c;
+  margin-top:4px;
+  font-weight:600;
+}
+
+.modal{
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,.55);
+  display:none;
+  align-items:center;
+  justify-content:center;
+  padding:20px;
+  z-index:100;
+}
+
+.modal.active{
+  display:flex;
+}
+
+.modal-box{
+  background:#fffaf2;
+  width:min(600px,100%);
+  border-radius:25px;
+  padding:30px;
+  position:relative;
+  max-height:85vh;
+  overflow:auto;
+}
+
+.modal-close{
+  position:absolute;
+  left:17px;
+  top:15px;
+  border:none;
+  background:#eee4d3;
+  color:#173b2b;
+  width:35px;
+  height:35px;
+  border-radius:50%;
+  cursor:pointer;
+}
+
+.modal-box h3{
+  font-family:"Reem Kufi Fun",sans-serif;
+  color:#173b2b;
+  font-size:26px;
+  margin-bottom:15px;
+}
+
+.modal-box p{
+  color:#66736b;
+  line-height:2;
+  font-size:13px;
+}
+
+.image-modal{
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,.82);
+  display:none;
+  align-items:center;
+  justify-content:center;
+  padding:20px;
+  z-index:200;
+  cursor:zoom-out;
+}
+
+.image-modal.active{
+  display:flex;
+}
+
+.image-modal img{
+  max-width:95%;
+  max-height:90vh;
+  object-fit:contain;
+  border-radius:18px;
+  box-shadow:0 20px 60px rgba(0,0,0,.4);
+}
+
+.image-modal-close{
+  position:absolute;
+  top:18px;
+  left:22px;
+  width:42px;
+  height:42px;
+  border:none;
+  border-radius:50%;
+  background:white;
+  color:#173b2b;
+  font-size:27px;
+  cursor:pointer;
+}
+
+@media(max-width:1050px){
+
+  .region-grid{
+    grid-template-columns:repeat(3,1fr);
+  }
+
+}
+
+@media(max-width:700px){
+
+  .header{
+    padding:17px 5%;
+  }
+
+  .header-actions{
+    display:none;
+  }
+
+  .hero{
+    padding:50px 5% 35px;
+  }
+
+  .regions,
+  .detail{
+    padding-left:5%;
+    padding-right:5%;
+  }
+
+  .region-grid,
+  .items-grid{
+    grid-template-columns:1fr;
+  }
+
+  .region-image{
+    height:220px;
+  }
+
+  .detail-head h2{
+    font-size:29px;
+  }
+
+  .item-image{
+    height:250px;
+  }
+
+  .item-image.dual-images-detail{
+    height:230px;
+  }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<header class="header">
+
+  <div class="logo">
+
+    <div class="logo-symbol">
+      🇸🇦
+    </div>
+
+    <div>
+
+      <h1>
+        لباسنا السعودي
+      </h1>
+
+      <p>
+        أزياء المناطق الخمس
+      </p>
+
+    </div>
+
+  </div>
+
+  <div class="header-actions">
+
+    <button
+      class="header-btn"
+      onclick="openAbout()"
+    >
+      عن الموقع
+    </button>
+
+    <button
+      class="header-btn"
+      onclick="scrollToRegions()"
+    >
+      المناطق
+    </button>
+
+  </div>
+
+</header>
+
+
+<section class="hero">
+
+  <div class="hero-badge">
+    🇸🇦 تراثنا هويتنا
+  </div>
+
+  <h2>
+    أزياء <span>المملكة</span>
+  </h2>
+
+  <p>
+    رحلة نتعرّف فيها على جمال الأزياء الشعبية في مناطق المملكة العربية السعودية،
+    واختلاف تفاصيلها وألوانها بما يعكس تنوع ثقافتنا وتراثنا.
+  </p>
+
+</section>
+
+
+<section class="regions" id="regions">
+
+  <div class="section-title">
+
+    <h3>
+      استكشفي مناطق المملكة
+    </h3>
+
+    <p>
+      اختاري المنطقة للتعرّف على أزيائها الشعبية
+    </p>
+
+  </div>
+
+  <div
+    class="region-grid"
+    id="regionGrid"
+  ></div>
+
+</section>
+
+
+<section class="detail" id="detail">
+
+  <button
+    class="back-btn"
+    onclick="backToRegions()"
+  >
+    ← العودة للمناطق
+  </button>
+
+  <div class="detail-head">
+
+    <h2 id="detailTitle"></h2>
+
+    <p id="detailDescription"></p>
+
+  </div>
+
+  <div
+    class="items-grid"
+    id="itemsGrid"
+  ></div>
+
+  <div class="sources">
+
+    <h3>
+      المصادر
+    </h3>
+
+    <p>
+      تم الاستعانة بمعلومات وصور الأزياء الشعبية من المصادر المتاحة عن
+      أزياء مناطق المملكة العربية السعودية، ومن بينها تقرير أخبار 24
+      عن أنواع اللباس لكل منطقة من مناطق المملكة.
+    </p>
+
+    <p style="margin-top:10px;">
+
+      المصدر:
+
+      <a
+        href="https://www.akhbaar24.com/article/detail/588672"
+        target="_blank"
+      >
+        أخبار 24 — بمناسبة يوم التأسيس.. شاهد أنواع اللبس لكل منطقة من مناطق المملكة
+      </a>
+
+    </p>
+
+    <button
+      class="voice-btn"
+      onclick="readRegion()"
+    >
+      🔊 الاستماع للمعلومات
+    </button>
+
+  </div>
+
+</section>
+
+
+<footer class="footer">
+
+  <div>
+    لباسنا السعودي | تراث المملكة العربية السعودية 🇸🇦
+  </div>
+
+  <div style="margin-top:18px;">
+
+    <div class="footer-title">
+      عمل طالبات الثانوية الرابعة
+    </div>
+
+    <div>
+      الصف 3/6
+    </div>
+
+    <div class="footer-names">
+      الطالبات : ملك فهد ، شذى عبدالعزيز ، لانا بدر ، جنى سعيد ، ندى وليد
+    </div>
+
+    <div class="footer-teacher">
+      بإشراف المعلمة : عفاف الطويلعي
+    </div>
+
+  </div>
+
+</footer>
+
+
+<div
+  class="modal"
+  id="aboutModal"
+>
+
+  <div class="modal-box">
+
+    <button
+      class="modal-close"
+      onclick="closeAbout()"
+    >
+      ×
+    </button>
+
+    <h3>
+      عن الموقع
+    </h3>
+
+    <p>
+      موقع تعليمي تفاعلي يعرّف بالأزياء الشعبية في المناطق الخمس
+      بالمملكة العربية السعودية، ويهدف إلى إبراز التنوع الثقافي
+      والتراثي الذي تتميز به المملكة.
+    </p>
+
+  </div>
+
+</div>
+
+
+<div
+  class="image-modal"
+  id="imageModal"
+  onclick="closeImage()"
+>
+
+  <button
+    class="image-modal-close"
+    onclick="closeImage(event)"
+  >
+    ×
+  </button>
+
+  <img
+    id="modalImage"
+    src=""
+    alt="الصورة المكبرة"
+    onclick="event.stopPropagation()"
+  >
+
+</div>
+
+
+<script>
+
+/* =====================================================
+   صور الواجهات الرئيسية
+===================================================== */
+
+const CITY_IMAGES = {
+
+  central:
+  "https://commons.wikimedia.org/wiki/Special:FilePath/Riyadh%20Skyline.jpg",
+
+  western:
+  "https://cnn-arabic-images.cnn.io/cloudinary/image/upload/x_0%2Cy_0%2Cw_5465%2Ch_3074%2Cc_crop/w_1920%2Ch_1080%2Cc_fill%2Cq_auto%2Cg_center/cnnarabic/2021/01/16/images/175087.jpg",
+
+  eastern:
+  "https://www.visitsaudi.com/content/dam/wvs/destinations/dammam/dammam-banner.jpg",
+
+  northern:
+  "https://alriyadh.com/media/article/2025/06/30/img/3031485917.jpg",
+
+  southern:
+  "https://qafilat-altawhid.com/wp-content/uploads/2023/09/image_6483441-11.jpg"
+
+};
+
+
+/* =====================================================
+   صور الأزياء
+===================================================== */
+
+const TRADITIONAL_IMAGES = {
+
+  central:{
+
+    adults:
+    "https://s3-eu-west-1.amazonaws.com/content.argaamnews.com/9ed13413-e5fd-4cbb-af63-ff564aefaad6.jpg",
+
+    women:
+    "https://s3-eu-west-1.amazonaws.com/content.argaamnews.com/9b77d6bc-a383-46f8-8309-bd25aacf1c0e.jpg",
+
+    children:
+    "https://s3-eu-west-1.amazonaws.com/content.argaamnews.com/8f7ed7ed-4c60-431f-b0c1-aac1583bde92.jpg"
+
+  },
+
+  northern:{
+
+    adults:
+    "https://s3-eu-west-1.amazonaws.com/content.argaamnews.com/4c46807f-dc72-40f5-bfaa-9c3bb5ff982c.jpg",
+
+    children:
+    "https://s3-eu-west-1.amazonaws.com/content.argaamnews.com/8c209e73-6e7e-41aa-947b-159af5938c15.jpg"
+
+  },
+
+  southern:{
+
+    adults:
+    "https://s3-eu-west-1.amazonaws.com/content.argaamnews.com/e7e70205-e0aa-40a3-8c97-7ef0418ac874.jpg",
+
+    children:
+    "https://s3-eu-west-1.amazonaws.com/content.argaamnews.com/1c19695c-d0ce-408d-8db4-53b5942d23e0.jpg"
+
+  },
+
+  eastern:{
+
+    adults:
+    "https://s3-eu-west-1.amazonaws.com/content.argaamnews.com/e1d7d52c-b4ce-4889-af49-c31aea9d1c1b.jpg",
+
+    children:
+    "https://s3-eu-west-1.amazonaws.com/content.argaamnews.com/39304296-b454-457f-8e52-441e060dc9e3.jpg"
+
+  },
+
+  western:{
+
+    adults:
+    "https://s3-eu-west-1.amazonaws.com/content.argaamnews.com/fb45722d-f248-4a92-8343-ca12dc2ed2fd.jpg",
+
+    children:
+    "https://s3-eu-west-1.amazonaws.com/content.argaamnews.com/438c7ce8-5528-4a3d-ab08-f1b54d173a7e.jpg"
+
+  }
+
+};
+
+
+/* =====================================================
+   بيانات المناطق
+===================================================== */
+
+const regions = {
+
+  central:{
+
+    name:"المنطقة الوسطى",
+
+    description:
+    "تتميز أزياء المنطقة الوسطى بطابعها النجدي الأصيل، وتظهر فيها البساطة والألوان الهادئة والتفاصيل التقليدية.",
+
+    image:CITY_IMAGES.central,
+
+    items:[
+
+      {
+        title:"أزياء الرجال والنساء التقليدية",
+
+        desc:
+        "تظهر في الأزياء التقليدية للمنطقة الوسطى ملامح الطابع النجدي، مع اختلاف القطع والتفاصيل بين الرجال والنساء.",
+
+        image:TRADITIONAL_IMAGES.central.adults,
+
+        secondImage:TRADITIONAL_IMAGES.central.women
+      },
+
+      {
+        title:"أزياء الأطفال",
+
+        desc:
+        "تتميز ملابس الأطفال في المنطقة الوسطى بطابعها الشعبي المستوحى من الأزياء التقليدية للكبار.",
+
+        image:TRADITIONAL_IMAGES.central.children
+      }
+
+    ]
+
+  },
+
+
+  northern:{
+
+    name:"المنطقة الشمالية",
+
+    description:
+    "تعكس أزياء المنطقة الشمالية طبيعة المنطقة وتراثها، وتتميز بقطع عملية وألوان متناسقة.",
+
+    image:CITY_IMAGES.northern,
+
+    items:[
+
+      {
+        title:"أزياء الرجال والنساء التقليدية",
+
+        desc:
+        "تتسم الأزياء الشعبية في المنطقة الشمالية بتفاصيل مستوحاة من التراث المحلي.",
+
+        image:TRADITIONAL_IMAGES.northern.adults
+      },
+
+      {
+        title:"أزياء الأطفال",
+
+        desc:
+        "تحمل أزياء الأطفال ملامح من التراث الشعبي للمنطقة الشمالية.",
+
+        image:TRADITIONAL_IMAGES.northern.children
+      }
+
+    ]
+
+  },
+
+
+  southern:{
+
+    name:"المنطقة الجنوبية",
+
+    description:
+    "تتميز أزياء المنطقة الجنوبية بتنوعها وغنى تفاصيلها، وتتأثر بالبيئة والتراث المحلي لكل محافظة.",
+
+    image:CITY_IMAGES.southern,
+
+    items:[
+
+      {
+        title:"أزياء الرجال والنساء التقليدية",
+
+        desc:
+        "تتميز الأزياء الجنوبية بألوانها وتفاصيلها التراثية المميزة.",
+
+        image:TRADITIONAL_IMAGES.southern.adults
+      },
+
+      {
+        title:"أزياء الأطفال",
+
+        desc:
+        "تعكس أزياء الأطفال في الجنوب جانباً من الهوية الشعبية للمنطقة.",
+
+        image:TRADITIONAL_IMAGES.southern.children
+      }
+
+    ]
+
+  },
+
+
+  eastern:{
+
+    name:"المنطقة الشرقية",
+
+    description:
+    "تجمع أزياء المنطقة الشرقية بين التراث المحلي والتأثيرات الثقافية التي عرفتها المنطقة عبر تاريخها.",
+
+    image:CITY_IMAGES.eastern,
+
+    items:[
+
+      {
+        title:"أزياء الرجال والنساء التقليدية",
+
+        desc:
+        "تظهر في الأزياء الشعبية للمنطقة الشرقية عناصر من التراث الساحلي والمحلي.",
+
+        image:TRADITIONAL_IMAGES.eastern.adults
+      },
+
+      {
+        title:"أزياء الأطفال",
+
+        desc:
+        "تتميز ملابس الأطفال بتفاصيل شعبية مستوحاة من تراث المنطقة الشرقية.",
+
+        image:TRADITIONAL_IMAGES.eastern.children
+      }
+
+    ]
+
+  },
+
+
+  western:{
+
+    name:"المنطقة الغربية",
+
+    description:
+    "تتميز أزياء المنطقة الغربية بتنوعها نتيجة مكانتها التاريخية والثقافية، وتظهر فيها ألوان وقطع شعبية متعددة.",
+
+    image:CITY_IMAGES.western,
+
+    items:[
+
+      {
+        title:"أزياء الرجال والنساء التقليدية",
+
+        desc:
+        "تعكس الأزياء الشعبية في المنطقة الغربية التنوع الثقافي والتراثي للمنطقة.",
+
+        image:TRADITIONAL_IMAGES.western.adults
+      },
+
+      {
+        title:"أزياء الأطفال",
+
+        desc:
+        "تحمل أزياء الأطفال طابعاً مستوحى من الملابس التقليدية للمنطقة.",
+
+        image:TRADITIONAL_IMAGES.western.children
+      }
+
+    ]
+
+  }
+
+};
+
+
+/* =====================================================
+   إنشاء بطاقات المناطق
+===================================================== */
+
+function renderRegions(){
+
+  const grid =
+  document.getElementById("regionGrid");
+
+  grid.innerHTML="";
+
+  Object.keys(regions).forEach(key=>{
+
+    const region =
+    regions[key];
+
+    const card =
+    document.createElement("div");
+
+    card.className =
+    "region-card";
+
+    card.innerHTML=`
+
+      <div class="region-image">
+
+        <img
+          src="${region.image}"
+          alt="${region.name}"
+        >
+
+        <div class="region-overlay"></div>
+
+        <div class="region-name">
+          ${region.name}
+        </div>
+
+      </div>
+
+      <div class="region-content">
+
+        <p>
+          ${region.description}
+        </p>
+
+        <div class="region-link">
+          استكشفي الأزياء ←
+        </div>
+
+      </div>
+
+    `;
+
+    card.onclick =
+    ()=>openRegion(key);
+
+    grid.appendChild(card);
+
+  });
+
+}
+
+
+/* =====================================================
+   فتح المنطقة
+===================================================== */
+
+function openRegion(key){
+
+  const region =
+  regions[key];
+
+  document
+  .getElementById("regions")
+  .style.display="none";
+
+  document
+  .querySelector(".hero")
+  .style.display="none";
+
+  document
+  .getElementById("detail")
+  .classList.add("active");
+
+  document
+  .getElementById("detailTitle")
+  .textContent =
+  region.name;
+
+  document
+  .getElementById("detailDescription")
+  .textContent =
+  region.description;
+
+  renderChoices(region.items);
+
+  window.scrollTo({
+
+    top:0,
+
+    behavior:"smooth"
+
+  });
+
+}
+
+
+/* =====================================================
+   عرض الأزياء
+===================================================== */
+
+function renderChoices(items){
+
+  const grid =
+  document.getElementById("itemsGrid");
+
+  grid.innerHTML="";
+
+  items.forEach((item,index)=>{
+
+    const card =
+    document.createElement("div");
+
+    card.className =
+    "item-card";
+
+    let imageHTML="";
+
+    if(item.secondImage){
+
+      imageHTML=`
+
+        <div class="choice-symbol dual-images">
+
+          <img
+            src="${item.image}"
+            alt="${item.title}"
+            onclick="openImage('${item.image}',event)"
+          >
+
+          <img
+            src="${item.secondImage}"
+            alt="أزياء النساء"
+            onclick="openImage('${item.secondImage}',event)"
+          >
+
+        </div>
+
+      `;
+
+    }else{
+
+      imageHTML=`
+
+        <div class="choice-symbol">
+
+          <img
+            src="${item.image}"
+            alt="${item.title}"
+            onclick="openImage('${item.image}',event)"
+          >
+
+        </div>
+
+      `;
+
+    }
+
+    card.innerHTML=`
+
+      ${imageHTML}
+
+      <div class="choice-body">
+
+        <h4>
+          ${item.title}
+        </h4>
+
+        <p>
+          ${item.desc}
+        </p>
+
+        <div
+          class="region-link"
+          onclick="openItem(
+            '${escapeQuotes(item.title)}',
+            '${escapeQuotes(item.desc)}',
+            '${item.image}',
+            '${item.secondImage || ""}'
+          )"
+        >
+
+          عرض التفاصيل ←
+
+        </div>
+
+      </div>
+
+    `;
+
+    grid.appendChild(card);
+
+  });
+
+}
+
+
+/* =====================================================
+   فتح تفاصيل الزي
+===================================================== */
+
+function openItem(
+  title,
+  desc,
+  image,
+  secondImage=""
+){
+
+  const grid =
+  document.getElementById("itemsGrid");
+
+  let imageHTML="";
+
+  if(secondImage){
+
+    imageHTML=`
+
+      <div>
+
+        <img
+          class="item-image dual-images-detail"
+          src="${image}"
+          alt="${title}"
+          onclick="openImage('${image}',event)"
+        >
+
+        <img
+          class="item-image dual-images-detail"
+          src="${secondImage}"
+          alt="أزياء النساء"
+          onclick="openImage('${secondImage}',event)"
+        >
+
+      </div>
+
+    `;
+
+  }else{
+
+    imageHTML=`
+
+      <img
+        class="item-image"
+        src="${image}"
+        alt="${title}"
+        onclick="openImage('${image}',event)"
+      >
+
+    `;
+
+  }
+
+  grid.innerHTML=`
+
+    <div
+      class="item-card"
+      style="grid-column:1/-1"
+    >
+
+      ${imageHTML}
+
+      <div class="item-body">
+
+        <div class="item-number">
+          تفاصيل الزي
+        </div>
+
+        <div class="item-title">
+          ${title}
+        </div>
+
+        <div class="item-desc">
+          ${desc}
+        </div>
+
+      </div>
+
+    </div>
+
+  `;
+
+  window.scrollTo({
+
+    top:0,
+
+    behavior:"smooth"
+
+  });
+
+}
+
+
+/* =====================================================
+   تكبير الصور
+===================================================== */
+
+function openImage(image,event){
+
+  if(event){
+    event.stopPropagation();
+  }
+
+  document
+  .getElementById("modalImage")
+  .src=image;
+
+  document
+  .getElementById("imageModal")
+  .classList.add("active");
+
+}
+
+
+function closeImage(event){
+
+  if(event){
+    event.stopPropagation();
+  }
+
+  document
+  .getElementById("imageModal")
+  .classList.remove("active");
+
+  document
+  .getElementById("modalImage")
+  .src="";
+
+}
+
+
+/* =====================================================
+   حماية النصوص
+===================================================== */
+
+function escapeQuotes(text){
+
+  return String(text)
+
+    .replace(/'/g,"&#39;")
+
+    .replace(/"/g,"&quot;");
+
+}
+
+
+/* =====================================================
+   العودة للمناطق
+===================================================== */
+
+function backToRegions(){
+
+  document
+  .getElementById("detail")
+  .classList.remove("active");
+
+  document
+  .getElementById("regions")
+  .style.display="block";
+
+  document
+  .querySelector(".hero")
+  .style.display="block";
+
+  window.scrollTo({
+
+    top:0,
+
+    behavior:"smooth"
+
+  });
+
+  renderRegions();
+
+}
+
+
+/* =====================================================
+   زر المناطق
+===================================================== */
+
+function scrollToRegions(){
+
+  document
+  .getElementById("regions")
+  .scrollIntoView({
+
+    behavior:"smooth"
+
+  });
+
+}
+
+
+/* =====================================================
+   عن الموقع
+===================================================== */
+
+function openAbout(){
+
+  document
+  .getElementById("aboutModal")
+  .classList.add("active");
+
+}
+
+
+function closeAbout(){
+
+  document
+  .getElementById("aboutModal")
+  .classList.remove("active");
+
+}
+
+
+/* =====================================================
+   القراءة الصوتية
+===================================================== */
+
+function readRegion(){
+
+  const title =
+  document
+  .getElementById("detailTitle")
+  .textContent;
+
+  const desc =
+  document
+  .getElementById("detailDescription")
+  .textContent;
+
+  if(!("speechSynthesis" in window)){
+
+    alert(
+      "المتصفح لا يدعم خاصية القراءة الصوتية."
+    );
+
+    return;
+
+  }
+
+  speechSynthesis.cancel();
+
+  const speech =
+  new SpeechSynthesisUtterance(
+    title + ". " + desc
+  );
+
+  speech.lang =
+  "ar-SA";
+
+  speech.rate =
+  .9;
+
+  speech.pitch =
+  1;
+
+  speechSynthesis.speak(speech);
+
+}
+
+
+/* =====================================================
+   إغلاق النوافذ
+===================================================== */
+
+document
+.getElementById("aboutModal")
+.addEventListener(
+  "click",
+  function(e){
+
+    if(e.target===this){
+
+      closeAbout();
+
+    }
+
+  }
+);
+
+
+document.addEventListener(
+  "keydown",
+  function(e){
+
+    if(e.key==="Escape"){
+
+      closeImage();
+
+      closeAbout();
+
+    }
+
+  }
+);
+
+
+/* =====================================================
+   تشغيل الموقع
+===================================================== */
+
+renderRegions();
+
+</script>
+
+</body>
+</html>
+</body>
+</html>
